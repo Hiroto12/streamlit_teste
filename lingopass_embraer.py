@@ -2,6 +2,16 @@ import pandas as pd
 import streamlit as st
 from faker import Faker
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
 df2 = pd.read_csv(r'dados_teste_lingo4.csv')
 dataframe_completo = pd.read_csv(r'Base Embraer.csv')
 
